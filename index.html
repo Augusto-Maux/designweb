@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisão Design Web</title>
+    <title>Perfil</title>
 </head>
 <body>
-    <ul>
-        <li>Box Model</li>
-        <li>Display</li>
-        <li>Position</li>
-        <li>Flexbox</li>
-    </ul>
+    <header class="header">
+        <nav>
+            <ul class="menu menu-navegacao">
+                <li><a href="#">Estudo de caso</a></li>
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#">Entre em contato</a></li>
+            </ul>
 
-    <style>
-        .pai{
-            top: 50dvh;
-            position: relative;
-        }
+            <ul class="menu menu-social">
+                <li>
+                    <a href="#"><i class="fa-fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-fa-behance"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-fa-x"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        .filho{
-            position: absolute;
-            /*fixed também*/
-            /*pesquisar - box model, display, position, flexbox*/
-        }
-    </style>
+    <main>
+        <section class="container">
+            <div class="left">
+                <h1>Bruno Nakamura</h1>
+                <h3>UX / Dev Front-End</h3>
+                <p>Sou um híbrido raro: Design Systems + Engenharia de Produto. Entrego de ponta a ponta — da descoberta à produção — com métricas de negócio na cabeceira e DX/UX no detalhe. Tradução simultânea entre PMs, Design, Front, Back e Data. Sem teatrinho: shippo, meço, repito.</p>
+                <button>
+                    Vamos trabalhar juntos <i class="fa-fa-arrow-right"></i>
+                </button>
+            </div>
 
-    <div class="pai">
-        <div class="filho">
-
-        </div>
-    </div>
+            <figure class="right">
+                <img src="assets/img/perfil.jpg" alt="Foto do Bruno Nakamura">
+            </figure>
+        </section>
+        <section class="container last-jobs">
+            <h5>Trabalhou em:</h5>
+            <ul class="job-list">
+                <li><img src="assets/img/img-job-1.jpg" alt=""></li>
+                <li><img src="assets/img/img-job-2.jpg" alt=""></li>
+                <li><img src="assets/img/img-job-3.jpg" alt=""></li>
+                <li><img src="assets/img/img-job-4.jpg" alt=""></li>
+                <li><img src="assets/img/img-job-5.jpg" alt=""></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
