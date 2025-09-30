@@ -8,5 +8,42 @@ $cor-text-body: #9C9C9C;
 $cor-border-button: #62BA1B;
 
 body {
-    font: $font-texto;
+    font-family: $font-texto;
+    background-color: $cor-bg-body;
+    color: $cor-text-body;
+}
+
+main {
+    .perfil {
+        h1 {
+            color: $cor-text-title;
+            font-family: $font-titulo;
+            font-size: 44px;
+        }
+        h3 {
+            color: $cor-text-body;
+            font-weight: 200;
+            font-size: 24px;
+            font-family: $font-titulo;
+        }
+
+        button{}
+    }
+
+    .foto {
+
+    }
+}
+
+/*.header{
+    .menu{}
+    .menu-navegacao{}
+    .menu-social{}
+}*/
+
+/*.job-list{}*/
+
+.list-sem-estilo {
+    padding: 0;
+    list-style: none;
 }
