@@ -38,7 +38,7 @@
 
 body {
   font-family: "IBM Plex Mono", monospace;
-  background-color: #1B1B1B;
+  background-color: #080808;
   color: #9C9C9C;
 }
 
@@ -48,17 +48,42 @@ main .perfil h1 {
   font-size: 44px;
 }
 main .perfil h3 {
-  color: #9C9C9C;
-  font-weight: 200;
-  font-size: 24px;
+  color: #FFFFFF;
   font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
 }
-/*.header{
-    .menu{}
-    .menu-navegacao{}
-    .menu-social{}
-}*/
-/*.job-list{}*/
+main .perfil button {
+  color: #FFFFFF;
+  padding: 1.5em 5em;
+  border-radius: 4px;
+  border: 1px solid #62BA1B;
+  background: #62BA1B;
+  box-shadow: 0 8px 30px 0 rgba(63, 142, 0, 0.5);
+  margin-top: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+}
+main section ul {
+  justify-content: space-around;
+}
+main section ul img {
+  height: 5em;
+  width: 15em;
+}
+
+.header nav {
+  background: #1B1B1B;
+  padding: 16px;
+}
+.header nav ul li {
+  margin-right: 12px;
+}
+.header nav ul li a {
+  text-decoration-line: none;
+  color: #9C9C9C;
+}
+
 .list-sem-estilo {
   padding: 0;
   list-style: none;
