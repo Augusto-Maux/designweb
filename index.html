@@ -1,68 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="">
-        <nav class="">
-            <div class="">
-                <button class="">
-                    <i class="fa-solid fa-bars"></i>
+
+<body class="font-[IBM_Plex_Mono] font-normal bg-black text-gray-500">
+    <header class="bg-zinc-900 ml-auto mr-auto max-w-screen-xl px-[24px] py-[28px] mb-2">
+        <nav class="flex justify-between md:flex-row-reverse">
+            <ul class="flex items-center gap-[25px]">
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+
+            <div>
+                <button class="flex items-center gap-[16px] md:hidden">
+                    <i class="fa-solid fa-bars mr-2"></i>
                     <span>Menu</span>
                 </button>
 
-                <ul class="">
-                    <li><a href="#">Estudo de caso</a></li>
-                    <li><a href="#">Trabalhos</a></li>
-                    <li><a href="#">Entre em contato</a></li>
+                <ul class="hidden md:flex gap-[32px] items-center">
+                    <li class=""><a href="#" class="no-underline">Estudo de caso</a></li>
+                    <li class=""><a href="#"class="no-underline">Trabalhos</a></li>
+                    <li class=""><a href="#" class="no-underline">Entre em contato</a></li>
                 </ul>
             </div>
-
-            <ul class="">
-                <li>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-brands fa-behance"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </li>
-            </ul>
         </nav>
     </header>
 
     <main>
-        <section class="">
-            <div class="">
-                <h1>Bruno Nakamura</h1>
-                <h3>UX / Dev Front-End</h3>
-                <p>Sou um híbrido raro: Design Systems + Engenharia de Produto. Entrego de ponta a ponta — da descoberta à produção — com métricas de negócio na cabeceira e DX/UX no detalhe. Tradução simultânea entre PMs, Design, Front, Back e Data. Sem teatrinho: shippo, meço, repito.</p>
-                <button>
+        <section class="flex flex-col items-center gap-[40px] justify-between md:flex-row-reverse md:items-stretch">
+            <div class="h-[350px] w-[350px] md:h-full md:w-full md:p-4"> 
+                <figure>
+                    <img src="img/foto_perfil.png" alt="Foto de Augusto Maux">
+                </figure>
+            </div>
+
+            <div class="flex flex-col justify-center items-start gap-[40px] p-4">
+                <div class="gap-[24px]">
+                    <div class="mb-4">
+                        <h1 class="text-4xl text-white font-[Raleway] font-bold mb-2">Augusto Maux</h1>
+                        <h3 class="text-2xl text-white font-[Raleway] font-bold">UX / Dev Front-End</h3>
+                    </div>
+
+                    <p>Sou um híbrido raro: Design Systems + Engenharia de Produto. Entrego de ponta a ponta — da descoberta à produção — com métricas de negócio na cabeceira e DX/UX no detalhe. Tradução simultânea entre PMs, Design, Front, Back e Data. Sem teatrinho: shippo, meço, repito.</p>
+                </div>
+
+                <button class="px-[64px] py-[21px] rounded-md bg-lime-600 shadow-green-800 text-white font-semibold m-auto m-w-[90%] block md:m-0">
                     Vamos trabalhar juntos <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
-
-            <figure class="">
-                <img src="img/foto_perfil.png" alt="Foto do Bruno Nakamura">
-            </figure>
         </section>
-        <section class="">
-            <h5>Trabalhou em:</h5>
-            <ul class="">
-                <li><img src="img/job-1.png" alt=""></li>
-                <li><img src="img/job-2.png" alt=""></li>
-                <li><img src="img/job-3.png" alt=""></li>
-                <li><img src="img/job-4.png" alt=""></li>
-                <li><img src="img/job-5.png" alt=""></li>
+        <section class="gap-[10px] my-6 p-4">
+            <h5 class="my-4">Trabalhou em:</h5>
+            <ul class="flex flex-col gap-[24px] items-center md:flex-row md:justify-center">
+                <li class="no-underline"><img src="img/job-1.png" alt="" class="h-[5em] w-[15em]"></li>
+                <li class="no-underline"><img src="img/job-2.png" alt="" class="h-[5em] w-[15em]"></li>
+                <li class="no-underline"><img src="img/job-3.png" alt="" class="h-[5em] w-[15em]"></li>
+                <li class="no-underline"><img src="img/job-4.png" alt="" class="h-[5em] w-[15em]"></li>
+                <li class="no-underline"><img src="img/job-5.png" alt="" class="h-[5em] w-[15em]"></li>
             </ul>
         </section>
     </main>
