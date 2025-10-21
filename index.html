@@ -15,11 +15,11 @@
 
         <nav>
             <menu class="flex gap-8 text-gray-500">
-                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#sobre">Sobre</a></li>
-                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#professores">Professores</a></li>
-                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#alunos">Alunos</a></li>
-                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#projetos">Projetos</a></li>
-                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#documentos">Documentos</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:-translate-y-1" href="#sobre">Sobre</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:-translate-y-1" href="#professores">Professores</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:-translate-y-1" href="#alunos">Alunos</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:-translate-y-1" href="#projetos">Projetos</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:-translate-y-1" href="#documentos">Documentos</a></li>
             </menu>
         </nav>
     </header>
@@ -29,7 +29,7 @@
         <!--Hero-->
         <section class="flex flex-col items-center bg-gray-200 rounded-lg my-10 p-20">
             <h1 class="text-5xl max-w-140">Depois de muita espera, ela finalmente chegou!</h1>
-            <p class="my-10 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
+            <p class="my-10 max-w-140 text-gray-600">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
 
             <div class="flex gap-4 justify-center">
                 <a href="#" class="bg-sky-700 text-white py-4 px-8 rounded-sm">Ser feliz agora</a>
@@ -39,7 +39,7 @@
 
         <!--Logos-->
         <section>
-            <ul class="flex">
+            <ul class="flex justify-between">
                 <li><img src="img/logo1.jpg" alt=""></li>
                 <li><img src="img/logo2.jpg" alt=""></li>
                 <li><img src="img/logo3.jpg" alt=""></li>
@@ -78,27 +78,29 @@
         </section>
 
         <!--Mockup da camiseta da turma-->
-        <figure>
-            <img src="img/mockup.png" class="w-full" alt="Imagem de destaque da camisa" >
-        </figure>
-        <h2>Alunos que já compraram.</h2>
-        <p>Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
+            <figure>
+                <img src="img/mockup.png" class="w-full" alt="Imagem de destaque da camisa" >
+            </figure>
+            <div class="flex flex-col gap-8 items-center my-8">
+                <h2 class="text-5xl max-w-140">Alunos que já compraram.</h2>
+                <p class="text-gray-600">Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
+            </div>
 
         <!--Métricas-->
-        <section class="grid grid-cols-3 gap-4 text-center">
+        <section class="grid grid-cols-3 gap-4 text-center my-15">
             <div>
-                <h3 class="text-5xl">234+</h3>
-                <span>Alunos felizes</span>
+                <h3 class="text-5xl font-semibold">234+</h3>
+                <span class="text-gray-600">Alunos felizes</span>
             </div>
 
             <div>
-                <h3 class="text-5xl">38,903+</h3>
-                <span>Alunos adquirindo</span>
+                <h3 class="text-5xl font-semibold">38,903+</h3>
+                <span class="text-gray-600">Alunos adquirindo</span>
             </div>
 
             <div>
-                <h3 class="text-5xl">154+</h3>
-                <span>Alunos tristes</span>
+                <h3 class="text-5xl font-semibold">154+</h3>
+                <span class="text-gray-600">Alunos tristes</span>
             </div>
         </section>
     </main>
