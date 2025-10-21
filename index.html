@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page Version 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header class="mx-auto container">
+    <header class="container max-w-7xl mx-auto flex justify-between items-center p-4">
         <figure>
             <img src="img/logo.svg" alt="Logo de Infoweb by turma INFOWEBETI">
         </figure>
 
         <nav>
-            <menu>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#professores">Professores</a></li>
-                <li><a href="#alunos">Alunos</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#documentos">Documentos</a></li>
+            <menu class="flex gap-8 text-gray-500">
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#sobre">Sobre</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#professores">Professores</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#alunos">Alunos</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#projetos">Projetos</a></li>
+                <li><a class="hover:bg-sky-700 hover:text-white hover:py-2 hover:px-4 hover:rounded-lg transition duration-300 hover:translate-y-1" href="#documentos">Documentos</a></li>
             </menu>
         </nav>
     </header>
 
-    <main class="container mx-auto">
-        <section class="p-10 bg-gray-500 rounded-lg">
-            <h1>Depois de muita espera, ela finalmente chegou!</h1>
-            <p>O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
+    <main class="container max-w-7xl mx-auto">
 
-            <div class="">
-                <a href="#" class="">Ser feliz agora</a>
-                <a href="#" class="">Ficar triste</a>
+        <!--Hero-->
+        <section class="flex flex-col items-center bg-gray-200 rounded-lg my-10 p-20">
+            <h1 class="text-5xl max-w-140">Depois de muita espera, ela finalmente chegou!</h1>
+            <p class="my-10 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
+
+            <div class="flex gap-4 justify-center">
+                <a href="#" class="bg-sky-700 text-white py-4 px-8 rounded-sm">Ser feliz agora</a>
+                <a href="#" class="bg-sky-700 text-white py-4 px-8 rounded-sm">Ficar triste</a>
             </div>
         </section>
 
@@ -48,31 +51,40 @@
         </section>
 
         <!--Destaques-->
-        <section>
-            <div>
-                <strong>Ela é bonita</strong>
-                <span>Além de linda, é a mais top.</span>
+        <section class="flex justify-between my-20 text-gray-500">
+            <div class="flex gap-4 items-baseline">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>Ela é bonita</strong>
+                    <p>Além de linda, é a mais top.</p>
+                </div>
             </div>
 
-            <div>
-                <strong>O azul destaque</strong>
-                <span>O azul royal ficou para trás. Contemple o novo azul esmeralda.</span>
+            <div class="flex gap-4 items-baseline">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>O azul destaque</strong>
+                    <p>O azul royal ficou para trás. Contemple o novo azul esmeralda.</p>
+                </div>
             </div>
-
-            <div>
-                <strong>Webeti</strong>
-                <span>O nosso mascote é um gênio da informática.</span>
+    
+            <div class="flex gap-4 items-baseline">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>Webeti</strong>
+                    <p>O nosso mascote é um gênio da informática.</p>
+                </div>
             </div>
         </section>
 
         <!--Mockup da camiseta da turma-->
         <figure>
-            <img src="img/mockup.png" alt="">
+            <img src="img/mockup.png" class="w-full" alt="Imagem de destaque da camisa" >
         </figure>
         <h2>Alunos que já compraram.</h2>
         <p>Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
 
-        <!--métricas-->
+        <!--Métricas-->
         <section class="grid grid-cols-3 gap-4 text-center">
             <div>
                 <h3 class="text-5xl">234+</h3>
