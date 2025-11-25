@@ -11,12 +11,33 @@
 <body>
     <!-- Navbar -->
     <header class="navbar max-w-7xl mx-auto my-2 p-4 items-center bg-base-100 shadow-md rounded-lg">
-        <figure class="flex-1">
+        <figure class="md:flex-1">
             <img src="img/logo.svg" alt="Logo de Infoweb by turma INFOWEBETI">
         </figure>
 
+        <div class="drawer drawer-end md:hidden flex justify-end">
+            <input id="my-drawer-5" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <label for="my-drawer-5" class="drawer-button">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+
+            <div class="drawer-side">
+                <label for="my-drawer-5" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 min-h-full w-80 p-4">
+                    <li><a>Sobre</a></li>
+                    <li><a>Professores</a></li>
+                    <li><a>Alunos</a></li>
+                    <li><a>Projetos</a></li>
+                    <li><a>Documentos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
         <nav class="flex-none">
-            <menu class="flex gap-8 text-gray-500">
+            <menu class="flex gap-8 text-gray-500 hidden md:flex">
                 <li><a class="btn btn-ghost hover:bg-sky-700 hover:text-white transition hover:scale-105" href="#sobre">Sobre</a></li>
                 <li><a class="btn btn-ghost hover:bg-sky-700 hover:text-white transition hover:scale-105" href="#professores">Professores</a></li>
                 <li><a class="btn btn-ghost hover:bg-sky-700 hover:text-white transition hover:scale-105" href="#alunos">Alunos</a></li>
@@ -47,7 +68,7 @@
 
         <!--Logos-->
         <section>
-            <ul class="flex justify-between">
+            <ul class="flex flex-col gap-15 items-center md:gap-0 md:flex-row md:justify-between">
                 <li><img src="img/logo1.jpg" alt=""></li>
                 <li><img src="img/logo2.jpg" alt=""></li>
                 <li><img src="img/logo3.jpg" alt=""></li>
@@ -59,20 +80,20 @@
         </section>
 
         <!--Destaques-->
-        <section class="flex flex-row gap-4 my-20">
+        <section class="flex flex-col md:flex-row gap-4 md:my-20 my-6 mx-4 md:mx-0">
             <div class="collapse collapse-arrow bg-base-100 border border-base-300">
                 <input type="radio" name="accordion-1" checked="checked" />
                 <strong class="collapse-title">Ela é bonita</strong>
                 <p class="collapse-content text-gray-500">Além de linda, é a mais top.</p>
             </div>
 
-            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300 mx-1">
                 <input type="radio" name="accordion-1" />
                 <strong class="collapse-title">O azul destaque</strong>
                 <p class="collapse-content text-gray-500">O azul royal ficou para trás. Contemple o novo azul esmeralda.</p>
             </div>
 
-            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300 mx-1">
                 <input type="radio" name="accordion-1" />
                 <strong class="collapse-title">Webeti</strong>
                 <p class="collapse-content text-gray-500">O nosso mascote é um gênio da informática.</p>
@@ -83,13 +104,13 @@
             <figure>
                 <img src="img/mockup.png" class="w-full" alt="Imagem de destaque da camisa" >
             </figure>
-            <div class="flex flex-col gap-8 items-center my-8">
-                <h2 class="text-5xl max-w-140">Alunos que já compraram.</h2>
-                <p class="text-gray-600">Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
+            <div class="flex flex-col gap-8 items-center my-8 text-center">
+                <h2 class="text-5xl">Alunos que já compraram.</h2>
+                <p class="text-gray-600 max-w-sm md:max-w-md">Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
             </div>
 
         <!--Métricas-->
-        <section class="grid grid-cols-3 gap-4 text-center my-15">
+        <section class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-4 text-center my-15">
             <div>
                 <h3 class="text-5xl font-semibold">234+</h3>
                 <span class="text-gray-600">Alunos felizes</span>
