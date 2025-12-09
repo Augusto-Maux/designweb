@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" x-data="{ tab: 'home', dark: true }" :data-theme="dark ? 'dracula' : 'cupcake'">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="min-h-screen transition-colors">
+    <nav class="navbar bg-base-100 shadow-lg px-8">
+        <div class="flex-1 font-bold text-xl">DevPortfolio</div>
+        
+        <div class="flex-none gap-2">
+
+            <button 
+                @click="tab = 'home'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'home' }">
+                Home
+            </button>
+      
+            <button @click="tab = 'sobre'" 
+                class="btn btn-sm btn-ghost" 
+                :class="{'btn-active': tab === 'sobre' }">
+                Sobre
+            </button>
+          
+            <button @click="tab = 'contato'" 
+                class="btn btn-sm btn-ghost" 
+                :class="{'btn-active': tab === 'contato' }">
+                Contato
+            </button>
+
+            <input type="checkbox" class="toggle" x-model="dark" />
+        </div>
+    </nav>
+
+    <main class="p-10 max-w-5xl mx-auto">
+
+        <!-- HOME -->
+        <div x-show="tab === 'home'" x-transition:enter.duration.500ms>
+            <div class="hero min-h-[50vh] bg-base-200 rounded-box">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Olá, eu sou Dev</h1>
+                        <button @click="tab = 'contato'" 
+                                class="btn btn-primary mt-6">
+                            Fale Comigo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOBRE -->
+        <div x-show="tab === 'sobre'" x-transition x-data="{ ativo: 1 }" class="mt-4">
+            <div class="collapse collapse-arrow bg-base-200 my-2">
+                <input type="radio" name="acc" @click="ativo = 1" checked />
+                <div class="collapse-title text-xl font-medium">Minha Experiência</div>
+                <div class="collapse-content"><p>Desenvolvedor Web Fullstack</p></div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200 my-2">
+                <input type="radio" name="acc" @click="ativo = 2" />
+                <div class="collapse-title text-xl font-medium">Formação</div>
+                <div class="collapse-content"><p>IFRN - Informática para Internet</p></div>
+            </div>
+        </div>
+
+        <!-- CONTATO -->
+         <div x-show="tab === 'contato'" x-transition 
+         x-data="{ email: '', mensagem: '', enviado: false }" class="max-w-md mx-auto bg-base-300 rounded-xl p-8 flex flex-col items-center">
+            <div class="form-control my-2">
+                <label class="label">Email</label> <br>
+                <input x-model="email" class="input input-bordered">
+            </div>
+            
+            <div class="form-control my-2">
+                <label class="label">Mensagem</label>
+                <textarea x-model="mensagem" class="textarea textarea-bordered"></textarea>
+            </div>
+
+            <div class="mt-6">
+                <button @click="enviado = true; email=''; mensagem=''" 
+                        :disabled="!email.includes('@')"
+                        class="btn btn-primary w-full">Enviar</button>
+            </div>
+
+            <div x-show="enviado" x-transition class="alert alert-success mt-4 rounded-xl">
+                <span>Sucesso!</span>
+            </div>
+        </div>
+    </main>
+</body>   
+</html>
