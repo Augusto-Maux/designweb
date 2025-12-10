@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Inteligente</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="{ mostrar: false }">
+        <button x-on:click="mostrar = !mostrar">
+            Menu
+        </button>
+        <ul x-on:click.outside="mostrar = false" x-show="mostrar">
+                <li>Link 1</li>
+                <li>Link 2</li>
+            </ul>
+    </div>
+</body>
+</html>
