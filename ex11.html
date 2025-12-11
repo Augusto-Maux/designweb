@@ -7,9 +7,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+    
     <div x-data="{ mostrar: false}">
         <button x-on:click="mostrar = !mostrar">Ver Spoiler</button>
         <p x-show="mostrar">Lorem ipsum dolor sit amet.</p>
     </div>
+
 </body>
 </html>

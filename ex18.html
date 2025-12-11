@@ -9,10 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    
     <div x-data="{ler_mais : false}">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, nulla porro? Modi et laboriosam quia reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, tempore corporis quos eius tempora necessitatibus fugit minima aperiam eos magnam qui delectus ea!<span x-show="ler_mais === false">...</span></p>
         <p x-show="ler_mais">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, repellat. Exercitationem eveniet adipisci sit non consequuntur. Commodi quasi similique consequatur, voluptates blanditiis accusantium molestiae tempore deleniti quaerat nostrum quis, est distinctio perferendis.</p>
         <button class="btn mt-4" x-on:click="ler_mais = !ler_mais" x-text="ler_mais ? 'Ler menos' : 'Ler mais'"></button>
     </div>
+
 </body>
 </html>

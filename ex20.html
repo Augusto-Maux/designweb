@@ -9,8 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 </head>
 <body x-data="{ ampliar : false }" class="flex justify-center items-center w-full h-screen">
+
     <img src="img/img-dw-ex20.jpg" class="w-32 h-32 duration-300 " 
     @mouseenter="ampliar = true" @mouseleave="ampliar = false" 
     :class="ampliar ? 'scale-150' : 'scale-100'" alt="">
+    
 </body>
 </html>
