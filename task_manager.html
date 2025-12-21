@@ -58,15 +58,8 @@
         <ul class="flex flex-col gap-4">
             <template x-for="item in $store.todo.list" :key="item.id">
                 <li class="flex items-center gap-2 p-4 border rounded-lg">
-                    <input
-                        type="checkbox"
-                        class="checkbox checkbox-success"
-                        x-model="item.done"
-                    >
-
-                    <span
-                        x-text="item.text"
-                    ></span>
+                    <input type="checkbox" class="checkbox checkbox-success" x-model="item.done">
+                    <span x-text="item.text"></span>
                 </li>
             </template>
         </ul>
