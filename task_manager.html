@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('todo', {
+                items: [],
+                filter:'all',
+
+                get list() {
+                    if (this.filter === 'done') return this.items.filter(t => t.done);
+                    if (this.filter === 'todo') return this.items.filter(t => !t.done);
+                    return this.items;
+                },
+
+                add(text) {
+                    if (!text.trim()) return;
+                    this.items.push({id: Date.now(), text, done: false});
+                }
+            }
+            )})
+            
+    </script>
+</head>
+<body>
+    <header class="flex justify-center p-6 bg-gray-200 mb-6 text-black">
+        <h1 class="text-xl">Minhas Tarefas</h1>
+    </header>
+
+   <main class="flex justify-center flex-col items-center gap-6" x-data>
+        <div x-data="{ novaTarefa: ''}">
+            <input type="text" placeholder="Inserir tarefa..." x-model="novaTarefa"
+            @keydown.enter="$store.todo.add(novaTarefa); novaTarefa=''"
+            class="input input-bordered">
+
+            <button x-on:click="$store.todo.add(novaTarefa); novaTarefa=''"
+            class="btn">Adicionar Tarefa</button>
+        </div>
+
+        <div class="flex gap-4">
+            <button x-on:click="$store.todo.filter='all'" 
+            class="btn" :class="$store.todo.filter === 'all' ? 'bg-white text-black' : 'bg-gray-600 text-white'">Todas</button>
+
+            <button x-on:click="$store.todo.filter='todo'"
+            class="btn" :class="$store.todo.filter === 'todo' ? 'bg-white text-black' : 'bg-gray-600 text-white'">Pendentes</button>
+
+            <button x-on:click="$store.todo.filter='done'"
+            class="btn" :class="$store.todo.filter === 'done' ? 'bg-white text-black' : 'bg-gray-600 text-white'">Feitas</button>
+        </div>
+
+        <ul class="flex flex-col gap-4">
+            <template x-for="item in $store.todo.list" :key="item.id">
+                <li class="flex items-center gap-2 p-4 border rounded-lg">
+                    <input
+                        type="checkbox"
+                        class="checkbox checkbox-success"
+                        x-model="item.done"
+                    >
+
+                    <span
+                        x-text="item.text"
+                    ></span>
+                </li>
+            </template>
+        </ul>
+
+   </main>
+</body>
+</html>
