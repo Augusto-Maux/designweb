@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Freelancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="flex flex-col items-center justify-center gap-4" x-data="{ novoServico: {nomeServico: '', valorServico: 0}, servicos: [], 
+    get total(){
+        let total = 0
+        this.servicos.forEach(servico => {total += Number(servico.valorServico)})
+        return total;
+    }}">
+
+    <h1 class="text-xl mt-2">Orçamento #001</h1>
+
+    <div class="flex gap-3 my-2">
+        <input type="text" x-model="novoServico.nomeServico" placeholder="Nome do Serviço" class="input input-bordered p-2">
+        <input type="number" x-model.number="novoServico.valorServico" placeholder="Valor do Serviço"class="input input-bordered p-2">
+        <button x-on:click="if (novoServico.nomeServico && novoServico.valorServico) {
+            servicos.push({nomeServico: novoServico.nomeServico, valorServico: novoServico.valorServico}); 
+            novoServico.nomeServico = ''; novoServico.valorServico = 0;
+        }" class="btn">Adicionar</button>
+    </div>
+
+    <ul class="flex flex-col items-center gap-2">
+        <template x-for="(servico, index) in servicos" :key="index">
+            <li class="p-2 rounded-lg flex gap-4 bg-gray-100 text-black">
+                <span x-text="servico.nomeServico"></span>
+                <span x-text="'R$ ' + servico.valorServico"></span>
+            </li>
+        </template>
+    </ul>
+
+    <div>
+        <span>Total</span>
+        <span x-text="'R$ ' + total"></span>
+    </div>
+</body>
+</html>
